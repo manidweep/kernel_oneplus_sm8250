@@ -3324,7 +3324,7 @@ static void _sde_encoder_input_handler_register(
 	}
 }
 
-static void _sde_encoder_input_handler_unregister(
+static __maybe_unused void _sde_encoder_input_handler_unregister(
 		struct drm_encoder *drm_enc)
 {
 	struct sde_encoder_virt *sde_enc = to_sde_encoder_virt(drm_enc);

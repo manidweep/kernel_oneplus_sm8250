@@ -16702,7 +16702,7 @@ int oplus_chg_set_pd_config(void)
 {
 	int ret = 0;
 	struct oplus_chg_chip *chip = g_oplus_chip;
-	
+
 	if (!chip) {
 		return -1;
 	}
@@ -16761,14 +16761,14 @@ int oplus_chg_enable_qc_detect(void)
 	int ret = 0;
 	struct smb_charger *chg = NULL;
 	struct oplus_chg_chip *chip = g_oplus_chip;
-	
+
 	if (!chip) {
 		return -1;
 	}
 	chg = &chip->pmic_spmi.smb5_chip->chg;
-	
+
 	chg->hvdcp_disable = false;
-	
+
 	if (oplus_hvdcp_is_enable(chg) == false) {
 		printk(KERN_ERR "%s: hvdcp enable\n", __func__);
 		smblib_hvdcp_detect_enable(chg, true);
@@ -16784,7 +16784,7 @@ int oplus_chg_set_qc_config(void)
 	int ret = 0;
 	struct smb_charger *chg = NULL;
 	struct oplus_chg_chip *chip = g_oplus_chip;
-	
+
 	if (!chip) {
 		return -1;
 	}
